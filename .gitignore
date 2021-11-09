@@ -17,3 +17,5 @@ out/
 *.iml
 *.ipr
 *.iws
+.allure
+allure-results

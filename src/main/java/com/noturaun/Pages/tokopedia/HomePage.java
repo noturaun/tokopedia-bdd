@@ -1,5 +1,6 @@
-package com.noturaun.Pages;
+package com.noturaun.Pages.tokopedia;
 
+import com.noturaun.Pages.Base;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePage extends Base{
+public class HomePage extends Base {
 
     @FindBy(xpath = "//div[@id='search-container']//input")
     WebElement searchBox;
@@ -28,8 +29,8 @@ public class HomePage extends Base{
         getDriver().get(url);
     }
 
-    public void enterKeyword(String phrase){
-        searchBox.sendKeys(phrase);
+    public void enterKeyword(String keyword){
+        searchBox.sendKeys(keyword);
         searchBox.sendKeys(Keys.ENTER);
     }
 
